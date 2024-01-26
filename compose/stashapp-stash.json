@@ -1,0 +1,75 @@
+{
+   "CapAdd" : [],
+   "CapDrop" : [],
+   "cmd" : "stash",
+   "cpu_priority" : 50,
+   "enable_publish_all_ports" : false,
+   "enable_restart_policy" : true,
+   "enable_service_portal" : true,
+   "enabled" : false,
+   "env_variables" : [
+      {
+         "key" : "PATH",
+         "value" : "/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+      },
+      {
+         "key" : "STASH_CONFIG_FILE",
+         "value" : "/root/.stash/config.yml"
+      }
+   ],
+   "exporting" : false,
+   "id" : "869e5c736d8e5d20e0804dd654d5d39fccc76ae1329552719f79687a9fb5b653",
+   "image" : "stashapp/stash:latest",
+   "is_ddsm" : false,
+   "is_package" : false,
+   "labels" : {},
+   "links" : [],
+   "memory_limit" : 0,
+   "name" : "stashapp-stash",
+   "network" : [
+      {
+         "driver" : "bridge",
+         "name" : "bridge"
+      }
+   ],
+   "network_mode" : "bridge",
+   "port_bindings" : [],
+   "privileged" : false,
+   "service_portals" : [
+      {
+         "port" : "9999",
+         "protocol" : "http"
+      }
+   ],
+   "services" : [
+      {
+         "display_name" : "stashapp-stash (port: 9999)",
+         "id" : "Docker-869e5c736d8e5d20e0804dd654d5d39fccc76ae1329552719f79687a9fb5b653-9999",
+         "proxy_target" : "http://internal-not-exist-domain:9999",
+         "service" : "Docker-869e5c736d8e5d20e0804dd654d5d39fccc76ae1329552719f79687a9fb5b653-9999",
+         "type" : "reverse_proxy"
+      }
+   ],
+   "shortcut" : {
+      "enable_shortcut" : false,
+      "enable_status_page" : false,
+      "enable_web_page" : false,
+      "web_page_url" : ""
+   },
+   "use_host_network" : false,
+   "version" : 2,
+   "volume_bindings" : [
+      {
+         "host_volume_file" : "/docker/Stash",
+         "is_directory" : true,
+         "mount_point" : "/root",
+         "type" : "rw"
+      },
+      {
+         "host_volume_file" : "/Media/XXX",
+         "is_directory" : true,
+         "mount_point" : "/Media_Content",
+         "type" : "rw"
+      }
+   ]
+}
