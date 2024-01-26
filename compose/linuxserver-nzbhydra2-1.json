@@ -1,0 +1,113 @@
+{
+   "CapAdd" : null,
+   "CapDrop" : null,
+   "cmd" : "",
+   "cpu_priority" : 50,
+   "enable_publish_all_ports" : false,
+   "enable_restart_policy" : true,
+   "enable_service_portal" : true,
+   "enabled" : false,
+   "env_variables" : [
+      {
+         "key" : "PATH",
+         "value" : "/lsiopy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+      },
+      {
+         "key" : "HOME",
+         "value" : "/root"
+      },
+      {
+         "key" : "LANGUAGE",
+         "value" : "en_US.UTF-8"
+      },
+      {
+         "key" : "LANG",
+         "value" : "en_US.UTF-8"
+      },
+      {
+         "key" : "TERM",
+         "value" : "xterm"
+      },
+      {
+         "key" : "S6_CMD_WAIT_FOR_SERVICES_MAXTIME",
+         "value" : "0"
+      },
+      {
+         "key" : "S6_VERBOSITY",
+         "value" : "1"
+      },
+      {
+         "key" : "S6_STAGE2_HOOK",
+         "value" : "/docker-mods"
+      },
+      {
+         "key" : "VIRTUAL_ENV",
+         "value" : "/lsiopy"
+      },
+      {
+         "key" : "LSIO_FIRST_PARTY",
+         "value" : "true"
+      },
+      {
+         "key" : "NZBHYDRA2_RELEASE_TYPE",
+         "value" : "Release"
+      }
+   ],
+   "exporting" : false,
+   "id" : "8bdfe852ba5b49447ac3b87e01623a225bce6e7ff054832c4dc6ea528a1bc1f7",
+   "image" : "linuxserver/nzbhydra2:latest",
+   "is_ddsm" : false,
+   "is_package" : false,
+   "labels" : {
+      "build_version" : "Linuxserver.io version:- v5.3.5-ls123 Build-date:- 2023-12-25T22:52:24+00:00",
+      "maintainer" : "nemchik",
+      "org.opencontainers.image.authors" : "linuxserver.io",
+      "org.opencontainers.image.created" : "2023-12-25T22:52:24+00:00",
+      "org.opencontainers.image.description" : "[Nzbhydra2](https://github.com/theotherp/nzbhydra2) is a meta search application for NZB indexers, the spiritual successor to NZBmegasearcH, and an evolution of the original application [NZBHydra](https://github.com/theotherp/nzbhydra).    It provides easy access to a number of raw and newznab based indexers. The application NZBHydra 2 is replacing NZBHydra 1 and supports migrating from V1. Be wary that there may be some compatibility issues for those migrating from V1 to V2, so ensure you back up your old configuration before moving over to the new version. **NOTE:** The last version that supports migration is   ",
+      "org.opencontainers.image.documentation" : "https://docs.linuxserver.io/images/docker-nzbhydra2",
+      "org.opencontainers.image.licenses" : "GPL-3.0-only",
+      "org.opencontainers.image.ref.name" : "1116f24c35d09cc9a7ed6d51301db66341da71a2",
+      "org.opencontainers.image.revision" : "1116f24c35d09cc9a7ed6d51301db66341da71a2",
+      "org.opencontainers.image.source" : "https://github.com/linuxserver/docker-nzbhydra2",
+      "org.opencontainers.image.title" : "Nzbhydra2",
+      "org.opencontainers.image.url" : "https://github.com/linuxserver/docker-nzbhydra2/packages",
+      "org.opencontainers.image.vendor" : "linuxserver.io",
+      "org.opencontainers.image.version" : "v5.3.5-ls123"
+   },
+   "links" : [],
+   "memory_limit" : 0,
+   "name" : "linuxserver-nzbhydra2-1",
+   "network" : [
+      {
+         "driver" : "bridge",
+         "name" : "bridge"
+      }
+   ],
+   "network_mode" : "bridge",
+   "port_bindings" : [],
+   "privileged" : false,
+   "service_portals" : [
+      {
+         "port" : "5076",
+         "protocol" : "http"
+      }
+   ],
+   "services" : [
+      {
+         "display_name" : "linuxserver-nzbhydra2-1 (port: 5076)",
+         "id" : "Docker-8bdfe852ba5b49447ac3b87e01623a225bce6e7ff054832c4dc6ea528a1bc1f7-5076",
+         "proxy_target" : "http://internal-not-exist-domain:5076",
+         "service" : "Docker-8bdfe852ba5b49447ac3b87e01623a225bce6e7ff054832c4dc6ea528a1bc1f7-5076",
+         "type" : "reverse_proxy"
+      }
+   ],
+   "shortcut" : {
+      "enable_shortcut" : false,
+      "enable_status_page" : false,
+      "enable_web_page" : false,
+      "web_page_url" : ""
+   },
+   "use_host_network" : false,
+   "version" : 2,
+   "volume_bindings" : []
+}
