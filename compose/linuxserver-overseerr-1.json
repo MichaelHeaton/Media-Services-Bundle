@@ -1,0 +1,112 @@
+{
+   "CapAdd" : null,
+   "CapDrop" : null,
+   "cmd" : "",
+   "cpu_priority" : 50,
+   "enable_publish_all_ports" : false,
+   "enable_restart_policy" : true,
+   "enable_service_portal" : true,
+   "enabled" : false,
+   "env_variables" : [
+      {
+         "key" : "PATH",
+         "value" : "/lsiopy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+      },
+      {
+         "key" : "PS1",
+         "value" : "$(whoami)@$(hostname):$(pwd)\\$ "
+      },
+      {
+         "key" : "HOME",
+         "value" : "/config"
+      },
+      {
+         "key" : "TERM",
+         "value" : "xterm"
+      },
+      {
+         "key" : "S6_CMD_WAIT_FOR_SERVICES_MAXTIME",
+         "value" : "0"
+      },
+      {
+         "key" : "S6_VERBOSITY",
+         "value" : "1"
+      },
+      {
+         "key" : "S6_STAGE2_HOOK",
+         "value" : "/docker-mods"
+      },
+      {
+         "key" : "VIRTUAL_ENV",
+         "value" : "/lsiopy"
+      },
+      {
+         "key" : "LSIO_FIRST_PARTY",
+         "value" : "true"
+      }
+   ],
+   "exporting" : false,
+   "id" : "4c5856e43e93a03e9f91f785a3f17a99f508d3b3fb60ebdc938d41a190df0641",
+   "image" : "linuxserver/overseerr:latest",
+   "is_ddsm" : false,
+   "is_package" : false,
+   "labels" : {
+      "build_version" : "Linuxserver.io version:- v1.33.2-ls93 Build-date:- 2024-01-25T02:44:54+00:00",
+      "maintainer" : "nemchik",
+      "org.opencontainers.image.authors" : "linuxserver.io",
+      "org.opencontainers.image.created" : "2024-01-25T02:44:54+00:00",
+      "org.opencontainers.image.description" : "[Overseerr](https://overseerr.dev/) is a request management and media discovery tool built to work with your existing Plex ecosystem.  ",
+      "org.opencontainers.image.documentation" : "https://docs.linuxserver.io/images/docker-overseerr",
+      "org.opencontainers.image.licenses" : "GPL-3.0-only",
+      "org.opencontainers.image.ref.name" : "58d7fa56c6208c6202da325d9e8fd19854bdd826",
+      "org.opencontainers.image.revision" : "58d7fa56c6208c6202da325d9e8fd19854bdd826",
+      "org.opencontainers.image.source" : "https://github.com/linuxserver/docker-overseerr",
+      "org.opencontainers.image.title" : "Overseerr",
+      "org.opencontainers.image.url" : "https://github.com/linuxserver/docker-overseerr/packages",
+      "org.opencontainers.image.vendor" : "linuxserver.io",
+      "org.opencontainers.image.version" : "v1.33.2-ls93"
+   },
+   "links" : [],
+   "memory_limit" : 0,
+   "name" : "linuxserver-overseerr-1",
+   "network" : [
+      {
+         "driver" : "bridge",
+         "name" : "bridge"
+      }
+   ],
+   "network_mode" : "bridge",
+   "port_bindings" : [],
+   "privileged" : false,
+   "service_portals" : [
+      {
+         "port" : "5055",
+         "protocol" : "http"
+      }
+   ],
+   "services" : [
+      {
+         "display_name" : "linuxserver-overseerr-1 (port: 5055)",
+         "id" : "Docker-4c5856e43e93a03e9f91f785a3f17a99f508d3b3fb60ebdc938d41a190df0641-5055",
+         "proxy_target" : "http://172.17.0.11:5055",
+         "service" : "Docker-4c5856e43e93a03e9f91f785a3f17a99f508d3b3fb60ebdc938d41a190df0641-5055",
+         "type" : "reverse_proxy"
+      }
+   ],
+   "shortcut" : {
+      "enable_shortcut" : false,
+      "enable_status_page" : false,
+      "enable_web_page" : false,
+      "web_page_url" : ""
+   },
+   "use_host_network" : false,
+   "version" : 2,
+   "volume_bindings" : [
+      {
+         "host_volume_file" : "/docker/Overseerr/config",
+         "is_directory" : true,
+         "mount_point" : "/config",
+         "type" : "rw"
+      }
+   ]
+}
