@@ -1,0 +1,171 @@
+{
+   "CapAdd" : null,
+   "CapDrop" : null,
+   "cmd" : "",
+   "cpu_priority" : 50,
+   "enable_publish_all_ports" : false,
+   "enable_restart_policy" : true,
+   "enable_service_portal" : true,
+   "enabled" : false,
+   "env_variables" : [
+      {
+         "key" : "PATH",
+         "value" : "/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+      },
+      {
+         "key" : "BUILD_ARCHITECTURE",
+         "value" : "linux-amd64"
+      },
+      {
+         "key" : "APP_DIR",
+         "value" : "/app"
+      },
+      {
+         "key" : "CONFIG_DIR",
+         "value" : "/config"
+      },
+      {
+         "key" : "PUID",
+         "value" : "1000"
+      },
+      {
+         "key" : "PGID",
+         "value" : "1000"
+      },
+      {
+         "key" : "UMASK",
+         "value" : "002"
+      },
+      {
+         "key" : "TZ",
+         "value" : "Etc/UTC"
+      },
+      {
+         "key" : "XDG_CONFIG_HOME",
+         "value" : "/.config"
+      },
+      {
+         "key" : "XDG_CACHE_HOME",
+         "value" : "/.cache"
+      },
+      {
+         "key" : "XDG_DATA_HOME",
+         "value" : "/.local/share"
+      },
+      {
+         "key" : "LANG",
+         "value" : "en_US.UTF-8"
+      },
+      {
+         "key" : "LANGUAGE",
+         "value" : "en_US:en"
+      },
+      {
+         "key" : "LC_ALL",
+         "value" : "en_US.UTF-8"
+      },
+      {
+         "key" : "S6_BEHAVIOUR_IF_STAGE2_FAILS",
+         "value" : "2"
+      },
+      {
+         "key" : "S6_CMD_WAIT_FOR_SERVICES_MAXTIME",
+         "value" : "0"
+      },
+      {
+         "key" : "S6_SERVICES_GRACETIME",
+         "value" : "180000"
+      },
+      {
+         "key" : "S6_STAGE2_HOOK",
+         "value" : "/init-hook"
+      },
+      {
+         "key" : "VPN_ENABLED",
+         "value" : "false"
+      },
+      {
+         "key" : "VPN_PROVIDER",
+         "value" : "generic"
+      },
+      {
+         "key" : "VPN_LAN_NETWORK",
+         "value" : "0"
+      },
+      {
+         "key" : "VPN_CONF",
+         "value" : "wg0"
+      },
+      {
+         "key" : "VPN_ADDITIONAL_PORTS",
+         "value" : "0"
+      },
+      {
+         "key" : "PRIVOXY_ENABLED",
+         "value" : "false"
+      }
+   ],
+   "exporting" : false,
+   "id" : "bdf804eaf51dba310470119ca4c7335273b960f36636033f808ab92455c8599f",
+   "image" : "hotio/whisparr:latest",
+   "is_ddsm" : false,
+   "is_package" : false,
+   "labels" : {
+      "org.opencontainers.image.created" : "2024-01-24T08:18:12Z",
+      "org.opencontainers.image.revision" : "1b6c198b493eac36e80c1cd2a4b299c86b4e8c51",
+      "org.opencontainers.image.source" : "https://github.com/hotio/whisparr/tree/nightly",
+      "org.opencontainers.image.title" : "hotio/whisparr:nightly",
+      "org.opencontainers.image.url" : "https://github.com/hotio/whisparr/blob/master/README.md",
+      "org.opencontainers.image.vendor" : "hotio",
+      "org.opencontainers.image.version" : "2.0.0.355"
+   },
+   "links" : [],
+   "memory_limit" : 0,
+   "name" : "hotio-whisparr-1",
+   "network" : [
+      {
+         "driver" : "bridge",
+         "name" : "bridge"
+      }
+   ],
+   "network_mode" : "bridge",
+   "port_bindings" : [],
+   "privileged" : false,
+   "service_portals" : [
+      {
+         "port" : "6969",
+         "protocol" : "http"
+      }
+   ],
+   "services" : [
+      {
+         "display_name" : "hotio-whisparr-1 (port: 6969)",
+         "id" : "Docker-bdf804eaf51dba310470119ca4c7335273b960f36636033f808ab92455c8599f-6969",
+         "proxy_target" : "http://172.17.0.12:6969",
+         "service" : "Docker-bdf804eaf51dba310470119ca4c7335273b960f36636033f808ab92455c8599f-6969",
+         "type" : "reverse_proxy"
+      }
+   ],
+   "shortcut" : {
+      "enable_shortcut" : false,
+      "enable_status_page" : false,
+      "enable_web_page" : false,
+      "web_page_url" : ""
+   },
+   "use_host_network" : false,
+   "version" : 2,
+   "volume_bindings" : [
+      {
+         "host_volume_file" : "/docker/Whisparr/config",
+         "is_directory" : true,
+         "mount_point" : "/config",
+         "type" : "rw"
+      },
+      {
+         "host_volume_file" : "/docker/Whisparr/data",
+         "is_directory" : true,
+         "mount_point" : "/data",
+         "type" : "rw"
+      }
+   ]
+}
