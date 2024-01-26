@@ -1,0 +1,113 @@
+{
+   "CapAdd" : null,
+   "CapDrop" : null,
+   "cmd" : "",
+   "cpu_priority" : 50,
+   "enable_publish_all_ports" : false,
+   "enable_restart_policy" : true,
+   "enable_service_portal" : true,
+   "enabled" : false,
+   "env_variables" : [
+      {
+         "key" : "PATH",
+         "value" : "/lsiopy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+      },
+      {
+         "key" : "HOME",
+         "value" : "/config"
+      },
+      {
+         "key" : "LANGUAGE",
+         "value" : "en_US.UTF-8"
+      },
+      {
+         "key" : "LANG",
+         "value" : "en_US.UTF-8"
+      },
+      {
+         "key" : "TERM",
+         "value" : "xterm"
+      },
+      {
+         "key" : "S6_CMD_WAIT_FOR_SERVICES_MAXTIME",
+         "value" : "0"
+      },
+      {
+         "key" : "S6_VERBOSITY",
+         "value" : "1"
+      },
+      {
+         "key" : "S6_STAGE2_HOOK",
+         "value" : "/docker-mods"
+      },
+      {
+         "key" : "VIRTUAL_ENV",
+         "value" : "/lsiopy"
+      },
+      {
+         "key" : "LSIO_FIRST_PARTY",
+         "value" : "true"
+      },
+      {
+         "key" : "DEBIAN_FRONTEND",
+         "value" : "noninteractive"
+      }
+   ],
+   "exporting" : false,
+   "id" : "f7a7890daf8207ccfe3ffa1f8172ac3709e0609300db622c764327980879211e",
+   "image" : "linuxserver/ombi:latest",
+   "is_ddsm" : false,
+   "is_package" : false,
+   "labels" : {
+      "build_version" : "Linuxserver.io version:- v4.43.5-ls176 Build-date:- 2023-12-23T22:30:01+00:00",
+      "maintainer" : "aptalca",
+      "org.opencontainers.image.authors" : "linuxserver.io",
+      "org.opencontainers.image.created" : "2023-12-23T22:30:01+00:00",
+      "org.opencontainers.image.description" : "[Ombi](https://ombi.io) allows you to host your own Plex Request and user management system.  If you are sharing your Plex server with other users, allow them to request new content using an easy to manage interface!  Manage all your requests for Movies and TV with ease, leave notes for the user and get notification when a user requests something.  Allow your users to post issues against their requests so you know there is a problem with the audio etc.  Even automatically send them weekly newsletters of new content that has been added to your Plex server!",
+      "org.opencontainers.image.documentation" : "https://docs.linuxserver.io/images/docker-ombi",
+      "org.opencontainers.image.licenses" : "GPL-3.0-only",
+      "org.opencontainers.image.ref.name" : "63a9fe23749836d76ccd53bc5b96ccf3c6766554",
+      "org.opencontainers.image.revision" : "63a9fe23749836d76ccd53bc5b96ccf3c6766554",
+      "org.opencontainers.image.source" : "https://github.com/linuxserver/docker-ombi",
+      "org.opencontainers.image.title" : "Ombi",
+      "org.opencontainers.image.url" : "https://github.com/linuxserver/docker-ombi/packages",
+      "org.opencontainers.image.vendor" : "linuxserver.io",
+      "org.opencontainers.image.version" : "v4.43.5-ls176"
+   },
+   "links" : [],
+   "memory_limit" : 0,
+   "name" : "linuxserver-ombi-1",
+   "network" : [
+      {
+         "driver" : "bridge",
+         "name" : "bridge"
+      }
+   ],
+   "network_mode" : "bridge",
+   "port_bindings" : [],
+   "privileged" : false,
+   "service_portals" : [
+      {
+         "port" : "3579",
+         "protocol" : "http"
+      }
+   ],
+   "services" : [
+      {
+         "display_name" : "linuxserver-ombi-1 (port: 3579)",
+         "id" : "Docker-f7a7890daf8207ccfe3ffa1f8172ac3709e0609300db622c764327980879211e-3579",
+         "proxy_target" : "http://internal-not-exist-domain:3579",
+         "service" : "Docker-f7a7890daf8207ccfe3ffa1f8172ac3709e0609300db622c764327980879211e-3579",
+         "type" : "reverse_proxy"
+      }
+   ],
+   "shortcut" : {
+      "enable_shortcut" : false,
+      "enable_status_page" : false,
+      "enable_web_page" : false,
+      "web_page_url" : ""
+   },
+   "use_host_network" : false,
+   "version" : 2,
+   "volume_bindings" : []
+}
