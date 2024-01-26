@@ -1,0 +1,122 @@
+{
+   "CapAdd" : null,
+   "CapDrop" : null,
+   "cmd" : "",
+   "cpu_priority" : 50,
+   "enable_publish_all_ports" : false,
+   "enable_restart_policy" : true,
+   "enable_service_portal" : true,
+   "enabled" : false,
+   "env_variables" : [
+      {
+         "key" : "PATH",
+         "value" : "/lsiopy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+      },
+      {
+         "key" : "PS1",
+         "value" : "$(whoami)@$(hostname):$(pwd)\\$ "
+      },
+      {
+         "key" : "HOME",
+         "value" : "/config"
+      },
+      {
+         "key" : "TERM",
+         "value" : "xterm"
+      },
+      {
+         "key" : "S6_CMD_WAIT_FOR_SERVICES_MAXTIME",
+         "value" : "0"
+      },
+      {
+         "key" : "S6_VERBOSITY",
+         "value" : "1"
+      },
+      {
+         "key" : "S6_STAGE2_HOOK",
+         "value" : "/docker-mods"
+      },
+      {
+         "key" : "VIRTUAL_ENV",
+         "value" : "/lsiopy"
+      },
+      {
+         "key" : "LSIO_FIRST_PARTY",
+         "value" : "true"
+      },
+      {
+         "key" : "PYTHONIOENCODING",
+         "value" : "utf-8"
+      }
+   ],
+   "exporting" : false,
+   "id" : "2b52f2fac8bc0ddf7ee843141eaa0a35eabb433d755520fe09e77154d1ef445f",
+   "image" : "linuxserver/sabnzbd:latest",
+   "is_ddsm" : false,
+   "is_package" : false,
+   "labels" : {
+      "build_version" : "Linuxserver.io version:- 4.2.1-ls146 Build-date:- 2024-01-18T01:37:02+00:00",
+      "maintainer" : "thespad",
+      "org.opencontainers.image.authors" : "linuxserver.io",
+      "org.opencontainers.image.created" : "2024-01-18T01:37:02+00:00",
+      "org.opencontainers.image.description" : "[Sabnzbd](http://sabnzbd.org/) makes Usenet as simple and streamlined as possible by automating everything we can. All you have to do is add an .nzb. SABnzbd takes over from there, where it will be automatically downloaded, verified, repaired, extracted and filed away with zero human interaction.",
+      "org.opencontainers.image.documentation" : "https://docs.linuxserver.io/images/docker-sabnzbd",
+      "org.opencontainers.image.licenses" : "GPL-3.0-only",
+      "org.opencontainers.image.ref.name" : "b677fb4a31e49caff519d22806a6cf74fe3ff660",
+      "org.opencontainers.image.revision" : "b677fb4a31e49caff519d22806a6cf74fe3ff660",
+      "org.opencontainers.image.source" : "https://github.com/linuxserver/docker-sabnzbd",
+      "org.opencontainers.image.title" : "Sabnzbd",
+      "org.opencontainers.image.url" : "https://github.com/linuxserver/docker-sabnzbd/packages",
+      "org.opencontainers.image.vendor" : "linuxserver.io",
+      "org.opencontainers.image.version" : "4.2.1-ls146"
+   },
+   "links" : [],
+   "memory_limit" : 0,
+   "name" : "linuxserver-sabnzbd-1",
+   "network" : [
+      {
+         "driver" : "bridge",
+         "name" : "bridge"
+      }
+   ],
+   "network_mode" : "bridge",
+   "port_bindings" : [],
+   "privileged" : false,
+   "service_portals" : [
+      {
+         "port" : "8080",
+         "protocol" : "http"
+      }
+   ],
+   "services" : [
+      {
+         "display_name" : "linuxserver-sabnzbd-1 (port: 8080)",
+         "id" : "Docker-2b52f2fac8bc0ddf7ee843141eaa0a35eabb433d755520fe09e77154d1ef445f-8080",
+         "proxy_target" : "http://172.17.0.6:8080",
+         "service" : "Docker-2b52f2fac8bc0ddf7ee843141eaa0a35eabb433d755520fe09e77154d1ef445f-8080",
+         "type" : "reverse_proxy"
+      }
+   ],
+   "shortcut" : {
+      "enable_shortcut" : false,
+      "enable_status_page" : false,
+      "enable_web_page" : false,
+      "web_page_url" : ""
+   },
+   "use_host_network" : false,
+   "version" : 2,
+   "volume_bindings" : [
+      {
+         "host_volume_file" : "/Media/Downloads",
+         "is_directory" : true,
+         "mount_point" : "/Downloads",
+         "type" : "rw"
+      },
+      {
+         "host_volume_file" : "/docker/Sabnzbd/config",
+         "is_directory" : true,
+         "mount_point" : "/config",
+         "type" : "rw"
+      }
+   ]
+}
