@@ -1,0 +1,142 @@
+{
+   "CapAdd" : null,
+   "CapDrop" : null,
+   "cmd" : "",
+   "cpu_priority" : 50,
+   "enable_publish_all_ports" : false,
+   "enable_restart_policy" : true,
+   "enable_service_portal" : true,
+   "enabled" : false,
+   "env_variables" : [
+      {
+         "key" : "PATH",
+         "value" : "/lsiopy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+      },
+      {
+         "key" : "PS1",
+         "value" : "$(whoami)@$(hostname):$(pwd)\\$ "
+      },
+      {
+         "key" : "HOME",
+         "value" : "/root"
+      },
+      {
+         "key" : "TERM",
+         "value" : "xterm"
+      },
+      {
+         "key" : "S6_CMD_WAIT_FOR_SERVICES_MAXTIME",
+         "value" : "0"
+      },
+      {
+         "key" : "S6_VERBOSITY",
+         "value" : "1"
+      },
+      {
+         "key" : "S6_STAGE2_HOOK",
+         "value" : "/docker-mods"
+      },
+      {
+         "key" : "VIRTUAL_ENV",
+         "value" : "/lsiopy"
+      },
+      {
+         "key" : "LSIO_FIRST_PARTY",
+         "value" : "true"
+      },
+      {
+         "key" : "XDG_CONFIG_HOME",
+         "value" : "/config/xdg"
+      },
+      {
+         "key" : "SONARR_CHANNEL",
+         "value" : "v4-stable"
+      },
+      {
+         "key" : "SONARR_BRANCH",
+         "value" : "main"
+      }
+   ],
+   "exporting" : false,
+   "id" : "4fde804bd78277e132a0cfc696684214fae1c68b4c2a1c665941232dbba965cf",
+   "image" : "linuxserver/sonarr:latest",
+   "is_ddsm" : false,
+   "is_package" : false,
+   "labels" : {
+      "build_version" : "Linuxserver.io version:- 4.0.0.748-ls220 Build-date:- 2024-01-01T01:43:49+00:00",
+      "maintainer" : "thespad",
+      "org.opencontainers.image.authors" : "linuxserver.io",
+      "org.opencontainers.image.created" : "2024-01-01T01:43:49+00:00",
+      "org.opencontainers.image.description" : "[Sonarr](https://sonarr.tv/) (formerly NZBdrone) is a PVR for usenet and bittorrent users. It can monitor multiple RSS feeds for new episodes of your favorite shows and will grab, sort and rename them. It can also be configured to automatically upgrade the quality of files already downloaded when a better quality format becomes available.  ",
+      "org.opencontainers.image.documentation" : "https://docs.linuxserver.io/images/docker-sonarr",
+      "org.opencontainers.image.licenses" : "GPL-3.0-only",
+      "org.opencontainers.image.ref.name" : "7d9224748afa24a5db9312737fc2e7363731a248",
+      "org.opencontainers.image.revision" : "7d9224748afa24a5db9312737fc2e7363731a248",
+      "org.opencontainers.image.source" : "https://github.com/linuxserver/docker-sonarr",
+      "org.opencontainers.image.title" : "Sonarr",
+      "org.opencontainers.image.url" : "https://github.com/linuxserver/docker-sonarr/packages",
+      "org.opencontainers.image.vendor" : "linuxserver.io",
+      "org.opencontainers.image.version" : "4.0.0.748-ls220"
+   },
+   "links" : [],
+   "memory_limit" : 0,
+   "name" : "linuxserver-sonarr-1",
+   "network" : [
+      {
+         "driver" : "bridge",
+         "name" : "bridge"
+      }
+   ],
+   "network_mode" : "bridge",
+   "port_bindings" : [],
+   "privileged" : false,
+   "service_portals" : [
+      {
+         "port" : "8989",
+         "protocol" : "http"
+      }
+   ],
+   "services" : [
+      {
+         "display_name" : "linuxserver-sonarr-1 (port: 8989)",
+         "id" : "Docker-4fde804bd78277e132a0cfc696684214fae1c68b4c2a1c665941232dbba965cf-8989",
+         "proxy_target" : "http://172.17.0.3:8989",
+         "service" : "Docker-4fde804bd78277e132a0cfc696684214fae1c68b4c2a1c665941232dbba965cf-8989",
+         "type" : "reverse_proxy"
+      }
+   ],
+   "shortcut" : {
+      "enable_shortcut" : false,
+      "enable_status_page" : false,
+      "enable_web_page" : false,
+      "web_page_url" : ""
+   },
+   "use_host_network" : false,
+   "version" : 2,
+   "volume_bindings" : [
+      {
+         "host_volume_file" : "/Media/Series",
+         "is_directory" : true,
+         "mount_point" : "/Series",
+         "type" : "rw"
+      },
+      {
+         "host_volume_file" : "/Media/Downloads",
+         "is_directory" : true,
+         "mount_point" : "/Downloads",
+         "type" : "rw"
+      },
+      {
+         "host_volume_file" : "/docker/Sonaar/config",
+         "is_directory" : true,
+         "mount_point" : "/config",
+         "type" : "rw"
+      },
+      {
+         "host_volume_file" : "/docker/Sonaar/root",
+         "is_directory" : true,
+         "mount_point" : "/root",
+         "type" : "rw"
+      }
+   ]
+}
