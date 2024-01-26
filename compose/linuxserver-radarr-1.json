@@ -1,0 +1,122 @@
+{
+   "CapAdd" : null,
+   "CapDrop" : null,
+   "cmd" : "",
+   "cpu_priority" : 50,
+   "enable_publish_all_ports" : false,
+   "enable_restart_policy" : true,
+   "enable_service_portal" : true,
+   "enabled" : false,
+   "env_variables" : [
+      {
+         "key" : "PATH",
+         "value" : "/lsiopy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+      },
+      {
+         "key" : "PS1",
+         "value" : "$(whoami)@$(hostname):$(pwd)\\$ "
+      },
+      {
+         "key" : "HOME",
+         "value" : "/root"
+      },
+      {
+         "key" : "TERM",
+         "value" : "xterm"
+      },
+      {
+         "key" : "S6_CMD_WAIT_FOR_SERVICES_MAXTIME",
+         "value" : "0"
+      },
+      {
+         "key" : "S6_VERBOSITY",
+         "value" : "1"
+      },
+      {
+         "key" : "S6_STAGE2_HOOK",
+         "value" : "/docker-mods"
+      },
+      {
+         "key" : "VIRTUAL_ENV",
+         "value" : "/lsiopy"
+      },
+      {
+         "key" : "LSIO_FIRST_PARTY",
+         "value" : "true"
+      },
+      {
+         "key" : "XDG_CONFIG_HOME",
+         "value" : "/config/xdg"
+      }
+   ],
+   "exporting" : false,
+   "id" : "a3918ef781bf657bca33852d374132db6510d1a43c31fe54457fd4a41e89c097",
+   "image" : "linuxserver/radarr:latest",
+   "is_ddsm" : false,
+   "is_package" : false,
+   "labels" : {
+      "build_version" : "Linuxserver.io version:- 5.2.6.8376-ls198 Build-date:- 2023-12-31T16:57:38+00:00",
+      "maintainer" : "thelamer",
+      "org.opencontainers.image.authors" : "linuxserver.io",
+      "org.opencontainers.image.created" : "2023-12-31T16:57:38+00:00",
+      "org.opencontainers.image.description" : "[Radarr](https://github.com/Radarr/Radarr) - A fork of Sonarr to work with movies à la Couchpotato.  ",
+      "org.opencontainers.image.documentation" : "https://docs.linuxserver.io/images/docker-radarr",
+      "org.opencontainers.image.licenses" : "GPL-3.0-only",
+      "org.opencontainers.image.ref.name" : "d27e01a33e0a62cbfd462f5c1ebec65b075540cb",
+      "org.opencontainers.image.revision" : "d27e01a33e0a62cbfd462f5c1ebec65b075540cb",
+      "org.opencontainers.image.source" : "https://github.com/linuxserver/docker-radarr",
+      "org.opencontainers.image.title" : "Radarr",
+      "org.opencontainers.image.url" : "https://github.com/linuxserver/docker-radarr/packages",
+      "org.opencontainers.image.vendor" : "linuxserver.io",
+      "org.opencontainers.image.version" : "5.2.6.8376-ls198"
+   },
+   "links" : [],
+   "memory_limit" : 0,
+   "name" : "linuxserver-radarr-1",
+   "network" : [
+      {
+         "driver" : "bridge",
+         "name" : "bridge"
+      }
+   ],
+   "network_mode" : "bridge",
+   "port_bindings" : [],
+   "privileged" : false,
+   "service_portals" : [
+      {
+         "port" : "7878",
+         "protocol" : "http"
+      }
+   ],
+   "services" : [
+      {
+         "display_name" : "linuxserver-radarr-1 (port: 7878)",
+         "id" : "Docker-a3918ef781bf657bca33852d374132db6510d1a43c31fe54457fd4a41e89c097-7878",
+         "proxy_target" : "http://172.17.0.6:7878",
+         "service" : "Docker-a3918ef781bf657bca33852d374132db6510d1a43c31fe54457fd4a41e89c097-7878",
+         "type" : "reverse_proxy"
+      }
+   ],
+   "shortcut" : {
+      "enable_shortcut" : false,
+      "enable_status_page" : false,
+      "enable_web_page" : false,
+      "web_page_url" : ""
+   },
+   "use_host_network" : false,
+   "version" : 2,
+   "volume_bindings" : [
+      {
+         "host_volume_file" : "/Media/Movies",
+         "is_directory" : true,
+         "mount_point" : "/Movies",
+         "type" : "rw"
+      },
+      {
+         "host_volume_file" : "/Media/Downloads",
+         "is_directory" : true,
+         "mount_point" : "/Downloads",
+         "type" : "rw"
+      }
+   ]
+}
