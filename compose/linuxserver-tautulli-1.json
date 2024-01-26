@@ -1,0 +1,109 @@
+{
+   "CapAdd" : null,
+   "CapDrop" : null,
+   "cmd" : "",
+   "cpu_priority" : 50,
+   "enable_publish_all_ports" : false,
+   "enable_restart_policy" : true,
+   "enable_service_portal" : true,
+   "enabled" : true,
+   "env_variables" : [
+      {
+         "key" : "PATH",
+         "value" : "/lsiopy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+      },
+      {
+         "key" : "PS1",
+         "value" : "$(whoami)@$(hostname):$(pwd)\\$ "
+      },
+      {
+         "key" : "HOME",
+         "value" : "/root"
+      },
+      {
+         "key" : "TERM",
+         "value" : "xterm"
+      },
+      {
+         "key" : "S6_CMD_WAIT_FOR_SERVICES_MAXTIME",
+         "value" : "0"
+      },
+      {
+         "key" : "S6_VERBOSITY",
+         "value" : "1"
+      },
+      {
+         "key" : "S6_STAGE2_HOOK",
+         "value" : "/docker-mods"
+      },
+      {
+         "key" : "VIRTUAL_ENV",
+         "value" : "/lsiopy"
+      },
+      {
+         "key" : "LSIO_FIRST_PARTY",
+         "value" : "true"
+      },
+      {
+         "key" : "TAUTULLI_DOCKER",
+         "value" : "True"
+      }
+   ],
+   "exporting" : false,
+   "id" : "f28cee4f3cd5939589360c75ed34f266ba31742e5f362010a6caede89c05922a",
+   "image" : "linuxserver/tautulli:latest",
+   "is_ddsm" : false,
+   "is_package" : false,
+   "labels" : {
+      "build_version" : "Linuxserver.io version:- v2.13.4-ls115 Build-date:- 2024-01-11T23:34:19+00:00",
+      "maintainer" : "nemchik,thelamer",
+      "org.opencontainers.image.authors" : "linuxserver.io",
+      "org.opencontainers.image.created" : "2024-01-11T23:34:19+00:00",
+      "org.opencontainers.image.description" : "[Tautulli](http://tautulli.com) is a python based web application for monitoring, analytics and notifications for Plex Media Server.",
+      "org.opencontainers.image.documentation" : "https://docs.linuxserver.io/images/docker-tautulli",
+      "org.opencontainers.image.licenses" : "GPL-3.0-only",
+      "org.opencontainers.image.ref.name" : "22b3c1bb2dcf0b3cd40cde599f62e9c83d7c7d11",
+      "org.opencontainers.image.revision" : "22b3c1bb2dcf0b3cd40cde599f62e9c83d7c7d11",
+      "org.opencontainers.image.source" : "https://github.com/linuxserver/docker-tautulli",
+      "org.opencontainers.image.title" : "Tautulli",
+      "org.opencontainers.image.url" : "https://github.com/linuxserver/docker-tautulli/packages",
+      "org.opencontainers.image.vendor" : "linuxserver.io",
+      "org.opencontainers.image.version" : "v2.13.4-ls115"
+   },
+   "links" : [],
+   "memory_limit" : 0,
+   "name" : "linuxserver-tautulli-1",
+   "network" : [
+      {
+         "driver" : "bridge",
+         "name" : "bridge"
+      }
+   ],
+   "network_mode" : "bridge",
+   "port_bindings" : [],
+   "privileged" : false,
+   "service_portals" : [
+      {
+         "port" : "8181",
+         "protocol" : "http"
+      }
+   ],
+   "services" : [
+      {
+         "display_name" : "linuxserver-tautulli-1 (port: 8181)",
+         "id" : "Docker-f28cee4f3cd5939589360c75ed34f266ba31742e5f362010a6caede89c05922a-8181",
+         "proxy_target" : "http://internal-not-exist-domain:8181",
+         "service" : "Docker-f28cee4f3cd5939589360c75ed34f266ba31742e5f362010a6caede89c05922a-8181",
+         "type" : "reverse_proxy"
+      }
+   ],
+   "shortcut" : {
+      "enable_shortcut" : false,
+      "enable_status_page" : false,
+      "enable_web_page" : false,
+      "web_page_url" : ""
+   },
+   "use_host_network" : false,
+   "version" : 2,
+   "volume_bindings" : []
+}
