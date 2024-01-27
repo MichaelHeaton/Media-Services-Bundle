@@ -9,7 +9,7 @@ services:
       - PGID=1000
       - TZ=Etc/UTC
     volumes:
-      - /volume1/docker/Overseerr/config:/config
+      - /volume1/docker/overseerr/config:/config
     ports:
       - 5055:5055
     restart: always
@@ -22,7 +22,7 @@ services:
       - PGID=1000
       - TZ=Etc/UTC
     volumes:
-      - /volume1/docker/NZBHydra2/config:/config
+      - /volume1/docker/nzbhydra2/config:/config
       - /volume1/Media/Downloads:/downloads
     ports:
       - 5076:5076
@@ -51,7 +51,7 @@ services:
       - PGID=1000
       - TZ=Etc/UTC
     volumes:
-      - /volume1/docker/Prowlarr/config:/config
+      - /volume1/docker/prowlarr/config:/config
     ports:
       - 9696:9696
     restart: always
@@ -64,9 +64,24 @@ services:
       - PGID=1000
       - TZ=Etc/UTC
     volumes:
-      - /volume1/docker/Radarr/config:/config
+      - /volume1/docker/radarr/config:/config
       - /volume1/Media/Movies:/movies #optional
       - /volume1/Media/Downloads:/downloads #optional
     ports:
       - 7878:7878
+    restart: always
+
+  sonarr:
+    image: lscr.io/linuxserver/sonarr:latest
+    container_name: sonarr
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Etc/UTC
+    volumes:
+      - /volume1/docker/sonarr/config:/config
+      - /volume1/Media/Series:/tv #optional
+      - /volume1/Media/Downloads:/downloads #optional
+    ports:
+      - 8989:8989
     restart: always
