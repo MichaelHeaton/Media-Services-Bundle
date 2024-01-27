@@ -1,0 +1,29 @@
+---
+version: "0.1"
+services:
+  prowlarr:
+    image: linuxserver/prowlarr:latest
+    container_name: prowlarr
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Etc/UTC
+    volumes:
+      - /volume1/docker/Prowlarr/config:/config
+    ports:
+      - 9696:9696
+    restart: always
+
+  nzbhydra2:
+    image: linuxserver/nzbhydra2:latest
+    container_name: nzbhydra2
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Etc/UTC
+    volumes:
+      - /volume1/docker/NZBHydra2/config:/config
+      - /volume1/Media/Downloads:/downloads
+    ports:
+      - 5076:5076
+    restart: always
