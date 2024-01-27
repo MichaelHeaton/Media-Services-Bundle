@@ -28,6 +28,21 @@ services:
       - 5076:5076
     restart: always
 
+  sabnzbd:
+    image: lscr.io/linuxserver/sabnzbd:latest
+    container_name: sabnzbd
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Etc/UTC
+    volumes:
+      - /volume1/docker/sabnzbd/config:/config
+      - /volume1/Media/Downloads/completed:/downloads #optional
+      - /volume1/Media/Downloads/incomplete:/incomplete-downloads #optional
+    ports:
+      - 8080:8080
+    restart: always
+
   prowlarr:
     image: lscr.io/linuxserver/prowlarr:latest
     container_name: prowlarr
