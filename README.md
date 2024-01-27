@@ -29,7 +29,7 @@ Stash
 | Plex | | |
 | [SABnzbd](https://sabnzbd.org/) | | [lscr.io/linuxserver/sabnzbd](https://docs.linuxserver.io/images/docker-sabnzbd/?h=sabnzbd) |
 | Stash | | |
-| Tautulli | | |
+| [Tautulli](https://tautulli.com/) | | [lscr.io/linuxserver/tautulli](https://docs.linuxserver.io/images/docker-tautulli/?h=tautulli) |
 | [NZBHydra 2](https://github.com/theotherp/nzbhydra2) | | [lscr.io/linuxserver/nzbhydra2](https://docs.linuxserver.io/images/docker-nzbhydra2/?h=nzbhydra) |
 
 
