@@ -24,13 +24,13 @@ Stash
 | [Radarr](https://wiki.servarr.com/radarr) | Media Automation | Movies collection manager | [lscr.io/linuxserver/radarr](https://docs.linuxserver.io/images/docker-radarr/?h=radarr) |
 | [Sonarr](https://wiki.servarr.com/sonarr) | Media Automation | Series collection manager | [lscr.io/linuxserver/sonarr](https://docs.linuxserver.io/images/docker-sonarr/?h=sonarr) |
 | [Whisparr](https://wiki.servarr.com/whisparr) | Media Automation | Ault video collection manager | |
-| [Prowlarr](https://wiki.servarr.com/prowlarr) | Indexer Management | Prowlarr is an indexer manager/proxy | |
+| [Prowlarr](https://wiki.servarr.com/prowlarr) | Indexer Management | Prowlarr is an indexer manager/proxy | [lscr.io/linuxserver/prowlarr](https://docs.linuxserver.io/images/docker-prowlarr/?h=prowlarr) |
 | [Overseerr](https://overseerr.dev/) | | | [linuxserver/overseerr](https://docs.linuxserver.io/images/docker-overseerr/?h=overseerr) |
 | Plex | | |
 | [SABnzbd](https://sabnzbd.org/) | | [lscr.io/linuxserver/sabnzbd](https://docs.linuxserver.io/images/docker-sabnzbd/?h=sabnzbd) |
 | Stash | | |
 | Tautulli | | |
-| NZBHydra 2 | | |
+| [NZBHydra 2](https://github.com/theotherp/nzbhydra2) | | [lscr.io/linuxserver/nzbhydra2](https://docs.linuxserver.io/images/docker-nzbhydra2/?h=nzbhydra) |
 
 
 # Folder Structure
