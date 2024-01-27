@@ -1,6 +1,19 @@
 ---
 version: "0.1"
 services:
+  overseerr:
+    image: lscr.io/linuxserver/overseerr:latest
+    container_name: overseerr
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Etc/UTC
+    volumes:
+      - /volume1/docker/Overseerr/config:/config
+    ports:
+      - 5055:5055
+    restart: always
+
   prowlarr:
     image: linuxserver/prowlarr:latest
     container_name: prowlarr
