@@ -14,8 +14,22 @@ services:
       - 5055:5055
     restart: always
 
+  nzbhydra2:
+    image: lscr.io/linuxserver/nzbhydra2:latest
+    container_name: nzbhydra2
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Etc/UTC
+    volumes:
+      - /volume1/docker/NZBHydra2/config:/config
+      - /volume1/Media/Downloads:/downloads
+    ports:
+      - 5076:5076
+    restart: always
+
   prowlarr:
-    image: linuxserver/prowlarr:latest
+    image: lscr.io/linuxserver/prowlarr:latest
     container_name: prowlarr
     environment:
       - PUID=1000
@@ -27,16 +41,17 @@ services:
       - 9696:9696
     restart: always
 
-  nzbhydra2:
-    image: linuxserver/nzbhydra2:latest
-    container_name: nzbhydra2
+  radarr:
+    image: lscr.io/linuxserver/radarr:latest
+    container_name: radarr
     environment:
       - PUID=1000
       - PGID=1000
       - TZ=Etc/UTC
     volumes:
-      - /volume1/docker/NZBHydra2/config:/config
-      - /volume1/Media/Downloads:/downloads
+      - /volume1/docker/Radarr/config:/config
+      - /volume1/Media/Movies:/movies #optional
+      - /volume1/Media/Downloads:/downloads #optional
     ports:
-      - 5076:5076
+      - 7878:7878
     restart: always

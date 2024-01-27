@@ -21,16 +21,16 @@ Stash
 
 | Application | Catorgory | Description | Docker Image |
 | --- | --- | --- | --- |
-| [Radarr](https://wiki.servarr.com/radarr) | Media Automation | Movies collection manager | |
+| [Radarr](https://wiki.servarr.com/radarr) | Media Automation | Movies collection manager | [lscr.io/linuxserver/radarr](https://docs.linuxserver.io/images/docker-radarr/?h=radarr) |
 | [Sonarr](https://wiki.servarr.com/sonarr) | Media Automation | Series collection manager | |
 | [Whisparr](https://wiki.servarr.com/whisparr) | Media Automation | Ault video collection manager | |
 | [Prowlarr](https://wiki.servarr.com/prowlarr) | Indexer Management | Prowlarr is an indexer manager/proxy | |
-| Overseerr | | [linuxserver/overseerr](https://docs.linuxserver.io/images/docker-overseerr/?h=overseerr) |
-| Plex | |
-| SABnzbd | |
-| Stash | |
-| Tautulli | |
-| NZBHydra 2 | |
+| Overseerr | | | [linuxserver/overseerr](https://docs.linuxserver.io/images/docker-overseerr/?h=overseerr) |
+| Plex | | |
+| SABnzbd | | |
+| Stash | | |
+| Tautulli | | |
+| NZBHydra 2 | | |
 
 
 # Folder Structure
