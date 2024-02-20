@@ -59,6 +59,7 @@ Stash
 * https://tautulli.com/
 
 # TODO List:
+* https://support.jdownloader.org/Knowledgebase/Article/View/docker-container
 * https://goauthentik.io/
 * Sabnzbd https://sabnzbd.org/
 * Get access to a few indexers https://www.reddit.com/r/usenet/wiki/indexers/
